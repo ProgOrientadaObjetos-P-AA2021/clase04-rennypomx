@@ -26,6 +26,24 @@ public class Hospital {
     
     */
     
+    public Hospital(){
+        nombre = "Isidro Ayora";
+        ciudad = "Loja";
+        numeroDoctores = 100;
+        numeroEnfermeros = 200;
+    }
+    
+    /*
+        Crear un constructor que no tenga parámetros
+        y que asigne valores ya establecidos a todos 
+        los atributos.
+    nombre: Isidro Ayora
+    ciudad: Loja
+    numeroDoctores: 100
+    numeroEnfermeros: 200
+    
+    */
+    
     public void establecerNombre(String n){
         nombre = n;
     }
@@ -58,4 +76,16 @@ public class Hospital {
         return numeroEnfermeros;
     }
     
-}
+    
+    @Override
+    public String toString(){
+        String cadena = String.format("Datos del Hospital\nNombre: %s\n"
+                + "Ciudad: %s\nNumero de Doctores: %d\n"
+                + "Numero de enfermeros: %d\n", obtenerNombre(), 
+                obtenerCiudad(), obtenerNumeroDoctores(), 
+                obtenerNumeroEnfermeros());
+        return cadena;
+    }
+    
+    }
+    
